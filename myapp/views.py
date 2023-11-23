@@ -8,3 +8,9 @@ def index(request):
         'experience': 20,
     }
     return render(request, 'index.html', context)
+
+def wordCounter(request):
+    context = {
+
+    }
+    return render(request, 'wordCounter.html', context)
