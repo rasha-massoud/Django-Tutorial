@@ -8,7 +8,7 @@
 <h5 class="errorMessage">{{message}}</h5>
 {% endfor %}
 
-<form method="post" action="register">
+<form method="post" action="login">
     {% csrf_token %}
     <p>Username:</p>
     <input type="text" name="username" required/>
