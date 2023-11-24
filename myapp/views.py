@@ -49,4 +49,16 @@ def register(request):
         return render(request, 'register.html')
     
 def login(request):
-    return render(request, 'login.html')
+    if request.method == 'POST':
+        username = request.POST['username']
+        email = request.POST['email']
+        password = request.POST['password']
+        
+        user = auth.authenticate(username=username, email=email, password=password)            
+
+        if user is not None:
+            auth.login(request, user)
+            return redirect('/')
+        else:
+            messages.info(request, 'Invalid Credentials.')    
+            return render(request, 'login.html')
