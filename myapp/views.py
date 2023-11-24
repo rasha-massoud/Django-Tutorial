@@ -58,7 +58,9 @@ def login(request):
 
         if user is not None:
             auth.login(request, user)
-            return redirect('/')
+            return redirect('/resume')
         else:
             messages.info(request, 'Invalid Credentials.')    
             return render(request, 'login.html')
+    else:
+        return render(request, 'login.html')
