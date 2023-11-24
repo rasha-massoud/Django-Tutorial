@@ -7,3 +7,4 @@ class Feature:
     details: str
     svgPath: str
     iElementClass: str
+    iconColor: str
