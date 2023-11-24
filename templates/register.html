@@ -1,4 +1,12 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'style.css' %}" >
+
 <h1>Sign Up Below</h1>
+
+{% for message in messages %}
+<h5 class="errorMessage">{{message}}</h5>
+{% endfor %}
 
 <form method="post" action="register">
     {% csrf_token %}
