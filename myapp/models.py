@@ -5,3 +5,5 @@ class Feature:
     id: int
     name: str
     details: str
+    svgPath: str
+    iElementClass: str
