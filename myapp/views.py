@@ -71,3 +71,7 @@ def logout(request):
 
 def post(request, pk):
     return render(request, 'post.html', {'pk': pk})
+
+def posts(request):
+    posts = [1, 2, 3, 4, 5, 'John', 'Jane', 'Jacoub']
+    return render(request, 'posts.html', {'posts': posts})
