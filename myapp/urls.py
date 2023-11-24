@@ -6,4 +6,5 @@ urlpatterns = [
     path('online', views.onlineTemplate, name='onlineTemplate'),
     path('wordCounter', views.wordCounter, name='wordCounter'),
     path('counter', views.counter, name='counter'),
+    path('register', views.register, name='register'),
 ]
