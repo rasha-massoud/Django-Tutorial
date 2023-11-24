@@ -1,13 +1,16 @@
 from django.shortcuts import render
 
 # Create your views here.
-def index(request):
+def basicIndex(request):
     context = {
         'name': 'John Doe',
         'work': 'Developer',
         'experience': 20,
     }
-    return render(request, 'index.html', context)
+    return render(request, 'basicIndex.html', context)
+
+def onlineTemplate(request):
+    return render(request, 'onlineTemplate.html')
 
 def wordCounter(request):
     return render(request, 'wordCounter.html')
