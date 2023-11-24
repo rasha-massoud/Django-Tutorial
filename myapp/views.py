@@ -68,3 +68,6 @@ def login(request):
 def logout(request):
     auth.logout(request)
     return redirect('/login')
+
+def post(request, pk):
+    return render(request, 'post.html', {'pk': pk})
